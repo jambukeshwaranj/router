@@ -1,0 +1,35 @@
+
+<body>
+  <h1 style="text-align: center;">WELCOME ALL</h1>
+  <div class="container">
+    
+    <br>
+    <p>ENTER YOUR TEXT</p>
+    <input type="text" name='' id='' placeholder="Text here..." [(ngModel)]='todovalue'/>
+    user typing:{{todovalue}}<br><br>
+    <button (click)='addvalue()'>Add Value</button>
+    <div>
+      <ul id='pos'>
+        <li *ngFor="let item of list">
+          <input type="checkbox" name="isDone" [(ngModel)]='item.isDone'/>
+          {{item.value}}<button (click)='deleteItem(item.id)'>Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+ 
+  <div class="card"><h1>ROUTER</h1>
+  
+  <nav>
+    <a routerLink="/Department" routerLinkActive="active">Department</a><br><br>
+    <a routerLink="/Employee" routerLinkActive="active">Employee</a>
+  </nav>
+</div>
+  <router-outlet></router-outlet>
+ 
+ <!--
+ <p>validation works!</p>
+<input type="text" name="" id="" placeholder="Text here..."[(ngModel)]='items'/>
+<button (click)='button()'>Add Value</button>
+-->
